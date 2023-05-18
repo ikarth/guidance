@@ -24,5 +24,5 @@ executed_program = program(
     stream=None,
     async_mode=False
 )
-print("\n\Program Result:")
+print("\n\nProgram Result:")
 print(executed_program)
