@@ -24,4 +24,5 @@ executed_program = program(
     stream=None,
     async_mode=False
 )
+print("\n\Program Result:")
 print(executed_program)
