@@ -47,8 +47,8 @@ class LLM():
     
     @staticmethod
     def _open_cache(file_name):
-        return diskcache.Cache(os.path.join(platformdirs.user_cache_dir("guidance"), file_name))
-    
+        cache_path = diskcache.Cache(os.path.join(platformdirs.user_cache_dir("guidance"), file_name))
+        print("Cache path", os.path.join(platformdirs.user_cache_dir("guidance"), file_name))
 
 class LLMSession():
     def __init__(self, llm):
