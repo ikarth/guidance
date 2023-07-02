@@ -37,6 +37,7 @@ class TextGenerationWebUIRestClient:
             "skip_special_tokens": True,
             "stopping_strings": []
         }
+        self.parameters = {**self.parameters, **parameters}
 
     def generate(self, prompt, parameters):
         if parameters:
@@ -63,7 +64,8 @@ class TextGenerationWebUIRestClient:
         return json_response
 
 class TextGenerationWebUI(LLM):
-    cache = LLM._open_cache("_text_generation_web_ui.diskcache")
+    #cache = LLM._open_cache("_text_generation_web_ui.diskcache")
+    llm_name: str = "text-generation-webui"
 
     def __init__(self, model=None, caching=True, max_retries=5, max_calls_per_min=60, token=None, endpoint=None, temperature=0.0, chat_mode="auto", organization=None):
         super().__init__()
