@@ -1,3 +1,16 @@
+# Experimental Support of Guidance with Text-Generation-Web-UI
+
+1. Spin up your text-generation-web-ui
+2. git clone https://github.com/paolorechia/local-guidance
+3. cd local-guidance
+4. pip install -e .
+5. python3 test_example.py
+
+If it doesn't work, let me know!
+
+
+----------------------------------------------------
+
 <div align="right"><a href="https://guidance.readthedocs.org"><img src="https://readthedocs.org/projects/guidance/badge/?version=latest&style=flat" /></a></div>
 <div align="center"><picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/figures/guidance_logo_blue_dark.svg">
