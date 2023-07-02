@@ -152,13 +152,11 @@ class TextGenerationWebUISession(LLMSession):
         else:
             stop = [stop]
 
-
-
-
         # Temperature of 0.0 does not work with text generation web ui
         temperature = max(0.001, temperature)
-
-        data_parameters = {
+        data = {
+            "prompt": prompt,
+            "parameters": {
                 "max_new_tokens": max_tokens,
                 "do_sample": True,
                 "temperature": temperature,
@@ -179,10 +177,6 @@ class TextGenerationWebUISession(LLMSession):
                 "skip_special_tokens": True,
                 'stopping_strings': stop
             }
-
-        data = {
-            "prompt": prompt,
-            "parameters": data_parameters
         }
         out = self.llm.caller(**data)
 
